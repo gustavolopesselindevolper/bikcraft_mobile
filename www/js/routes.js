@@ -20,6 +20,14 @@ routes = [
     path: '/left-page-2/',
     url: './pages/left-page-2.html',
   },
+  {
+    path: '/left-page-3/',
+    url: './pages/left-page-2.html',
+  },
+  {
+    path: '/left-page-4/',
+    url: './pages/left-page-2.html',
+  },
   // Page Loaders & Router
   {
     path: '/page-loader-template7/:user/:userId/:posts/:postId/',
