@@ -38,58 +38,143 @@
 </head>
 
 <body>
-    <div id="app">
-        <!-- Status bar overlay for fullscreen mode-->
-        <div class="statusbar"></div>
-        <!-- Left panel with reveal effect when hidden -->
-        <div class="panel panel-left panel-reveal">
-          <div class="view view-left">
-            <div class="page">
-              <div class="navbar">
-                <div class="navbar-inner sliding">
-                  <div class="title">Menu</div>
-                </div>
-              </div>
-              <div class="page-content">
-                <div class="list links-list">
-                  <ul>
-                    <li><a href="/left-page-1/">Sobre</a></li>
-                    <li><a href="/left-page-2/">Produtos</a></li>
-                    <li><a href="/left-page-3/">Contato</a></li>
-                    <li><a href="/left-page-4/">Login</a></li>
-                  </ul>
-                </div>
-              </div>
+  <div id="app">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar"></div>
+    <!-- Left panel with reveal effect when hidden -->
+    <div class="panel panel-left panel-reveal">
+      <div class="view view-left">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner sliding">
+              <div class="title">MENU</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="list links-list">
+              <ul>
+                <li>
+                  <a href="/about/" data-view=".view-main" class="panel-close">SOBRE</a>
+                </li>
+                <li>
+                  <a href="/about/" data-view=".view-main" class="panel-close">PRODUTOS</a>
+                </li>
+                <li>
+                  <a href="/form/" data-view=".view-main" class="panel-close">CADASTRE-SE</a>
+                </li>
+                <li>
+                  <a href="/login/" data-view=".view-main" class="panel-close">LOGIN</a>
+                </li>
+                <li>
+                  <a href="/contato/" data-view=".view-main" class="panel-close">CONTATO</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-        <!-- Your main view, should have "view-main" class -->
-        <div class="view view-main ios-edges">
-          <!-- Page, data-name contains page name which can be used in callbacks -->
-          <div class="page" data-name="home">
-            <!-- Top Navbar -->
-            <div class="navbar">
-              <div class="navbar-inner">
-                <div class="left">
-                  <a href="#" class="link icon-only panel-open" data-panel="left">
-                    <i class="icon f7-icons ios-only">menu</i>
-                    <i class="icon material-icons md-only">menu</i>
-                  </a>
-                </div>
-                <div class="title sliding">BikCraft</div>
+      </div>
+    </div>
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main ios-edges">
+      <!-- Page, data-name contains page name which can be used in callbacks -->
+      <div class="page" data-name="home">
+        <!-- Top Navbar -->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left">
+              <a href="#" class="link icon-only panel-open" data-panel="left">
+                <i class="icon f7-icons ios-only">menu</i>
+                <i class="icon material-icons md-only">menu</i>
+              </a>
+            </div>
+            <div class="title sliding">BIKCRAFT</div>
+          </div>
+        </div>
+        <!-- Scrollable page content-->
+        <div class="page-content">
+          <div class="block block-strong">
+            <p>Bem vindo ao Aplicativo do BikCraft</p>
+
+            <p>Aqui você podera ter acesso a informaçoes sobre a loja de bikes</p>
+
+            <p>The fun thing is that you can easily control one view from another without any line of JavaScript just using "data-view" attribute on links.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block-title">Modals</div>
+          <div class="block block-strong">
+            <div class="row">
+              <div class="col-50">
+                <a href="#" class="button button-raised button-fill popup-open" data-popup="#my-popup">Popup</a>
+              </div>
+              <div class="col-50">
+                <a href="#" class="button button-raised button-fill login-screen-open" data-login-screen="#my-login-screen">Login Screen</a>
               </div>
             </div>
-            <!-- Scrollable page content-->
-            <div class="page-content">
-              <div class="block block-strong">
-                <p>Bicicletas feitas a mão</p>
-    
-                <p></p>
-    
-                <p>The fun thing is that you can easily control one view from another without any line of JavaScript just using "data-view" attribute on links.</p>
+          </div>
+
+
+    <!-- Popup -->
+    <div class="popup" id="my-popup">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Popup</div>
+              <div class="right">
+                <a href="#" class="link popup-close">Close</a>
               </div>
-    
-    
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <p>Popup content goes here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Screen -->
+    <div class="login-screen" id="my-login-screen">
+      <div class="view">
+        <div class="page">
+          <div class="page-content login-screen-content">
+            <div class="login-screen-title">Login</div>
+            <div class="list">
+              <ul>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Username</div>
+                    <div class="item-input-wrap">
+                      <input type="text" name="username" placeholder="Your username">
+                    </div>
+                  </div>
+                </li>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Password</div>
+                    <div class="item-input-wrap">
+                      <input type="password" name="password" placeholder="Your password">
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="list">
+              <ul>
+                <li>
+                  <a href="#" class="item-link list-button login-button">Sign In</a>
+                </li>
+              </ul>
+              <div class="block-footer">Some text about login information.<br>Click "Sign In" to close Login Screen</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
       <!-- Framework7 library -->
       <script src="framework7/js/framework7.min.js"></script>
     

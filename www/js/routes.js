@@ -8,13 +8,21 @@ routes = [
     url: './pages/about.html',
   },
   {
+    path: '/contato/',
+    url: './pages/contato.html',
+  },
+  {
+    path: '/login/',
+    url: './pages/login_usuario.html',
+  },
+  {
     path: '/form/',
-    url: './pages/form.html',
+    url: './pages/form_cadastro.html',
   },
   // Left View Pages
   {
     path: '/left-page-1/',
-    url: './pages/left-page-1.html',
+    url: './pages/form.html',
   },
   {
     path: '/left-page-2/',
@@ -25,8 +33,8 @@ routes = [
     url: './pages/left-page-2.html',
   },
   {
-    path: '/left-page-4/',
-    url: './pages/left-page-2.html',
+    path: '/login/',
+    url: './pages/form.html',
   },
   // Page Loaders & Router
   {
