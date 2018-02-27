@@ -13,3 +13,8 @@
 .statusbar-overlay {
     background: #000000;
 }
+
+.intromenu{
+    text-align: center;
+    font-size: 18px;
+}
