@@ -69,7 +69,7 @@
                       <a href="/produto/" data-view=".view-main" class="panel-close">PRODUTOS</a>
                     </li>
                     <li>
-                      <a href="/form/" data-view=".view-main" class="panel-close">CADASTRE-SE</a>
+                      <a href="/contato/" data-view=".view-main" class="panel-close">CONTATO</a>
                     </li>
                   </ul>
                 </div>
@@ -115,13 +115,12 @@
                 </div>-->
               </div>
             </div>
-            <!-- Toolbar
-            <div class="toolbar">
+             Toolbar
+            <div class="toolbar color-theme-yellow">
               <div class="toolbar-inner">
-                <a href="#" class="link">Left Link</a>
-                <a href="#" class="link">Right Link</a>
+               Nome do cara logado
               </div>
-            </div>-->
+            </div>
             <!-- Scrollable page content-->
             <div class="page-content intromenu">
               <div class="block block-strong">
@@ -168,7 +167,7 @@
                   <!--<div class="col-50">
                     <a href="#" class="button button-raised button-fill popup-open" data-popup="#my-popup">Popup</a>
                   </div>-->
-                  <div class="col-50 color-theme-yellow">
+                  <div class="col-50 color-theme-yellow botaologar">
                     <a href="#" class="button button-raised button-fill login-screen-open" data-login-screen="#my-login-screen">Logar</a>
                   </div>
                 </div>
@@ -245,17 +244,17 @@
                   <ul>
                     <li class="item-content item-input">
                       <div class="item-inner">
-                        <div class="item-title item-label">Username</div>
+                        <div class="item-title item-label">E-mail</div>
                         <div class="item-input-wrap">
-                          <input type="text" name="username" placeholder="Your username">
+                          <input type="email" name="username" placeholder="Digite seu Nome">
                         </div>
                       </div>
                     </li>
                     <li class="item-content item-input">
                       <div class="item-inner">
-                        <div class="item-title item-label">Password</div>
+                        <div class="item-title item-label">Senha</div>
                         <div class="item-input-wrap">
-                          <input type="password" name="password" placeholder="Your password">
+                          <input type="password" name="password" placeholder="Digite seu E-Mail">
                         </div>
                       </div>
                     </li>
@@ -264,10 +263,15 @@
                 <div class="list">
                   <ul>
                     <li>
-                      <a href="#" class="item-link list-button login-button">Sign In</a>
+                      <a href="#" class="item-link list-button login-button SingUp" id="entrar"> Cadastre-se</a>
+                    </li>
+                    <li>
+                      <a href="#" class="item-link list-button login-button SingIn" id="cadastro">Entrar</a>
+                    </li>
+                    <li>
+                      <a href="#" class="item-link list-button login-button SingOut" id="deslogar">Deslogar</a>
                     </li>
                   </ul>
-                  <div class="block-footer">Some text about login information.<br>Click "Sign In" to close Login Screen</div>
                 </div>
               </div>
             </div>
@@ -281,6 +285,8 @@
       <script src="js/routes.js"></script>
     
       <!-- Your custom app scripts -->
+      <script src="js/firebase.js"></script>
+      <script src="js/firebaseapp.js"></script>
       <script src="js/app.js"></script>
 
     <script type="text/javascript" src="cordova.js"></script>

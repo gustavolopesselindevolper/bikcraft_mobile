@@ -41,13 +41,29 @@ var mainView = app.views.create('.view-main', {
 });
 
 // Login Screen Demo
-$$('#my-login-screen .login-button').on('click', function () {
+$$('#my-login-screen .SingUp').on('click', function () {
   var username = $$('#my-login-screen [name="username"]').val();
   var password = $$('#my-login-screen [name="password"]').val();
+
+  app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
+
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(username,password)//Promisses
+    .then( function () {
+      app.dialog.alert('Bem vindo: ' + username);
+      this.$$('.toolbar-inner').innerHtml = 'Bem Vindo: ' + username;
+    })
+    .catch(function(error){
+      console.error(error.code)
+      console.error(error.message)
+      app.dialog.alert('Falha ao cadastrar, verifique o erro no console');
+      //this.$$('.toolbar-inner').innerHtml = 'Bem Vindo: ' + username;
+    })
 
   // Close login screen
   app.loginScreen.close('#my-login-screen');
 
   // Alert username and password
-  app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
+  //app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
 });
