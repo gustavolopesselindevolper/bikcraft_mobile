@@ -23,6 +23,10 @@ routes = [
     path: '/form/',
     url: './pages/form_cadastro.html',
   },
+  {
+    path: '/bike/',
+    url: './pages/real-time-database-lista.html',
+  },
   // Left View Pages
   {
     path: '/left-page-1/',

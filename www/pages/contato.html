@@ -16,9 +16,9 @@
           <li>
             <div class="item-content item-input">
               <div class="item-inner">
-                <div class="item-title item-label">Nome</div>
+                <div class="item-title item-label">Email</div>
                 <div class="item-input-wrap">
-                  <input type="text" placeholder="Digite seu Nome"/>
+                  <input type="email" id="email" placeholder="Digite seu Email"/>
                 </div>
               </div>
             </div>
@@ -26,9 +26,9 @@
           <li>
             <div class="item-content item-input">
               <div class="item-inner">
-                <div class="item-title item-label">E-mail</div>
+                <div class="item-title item-label">Nome</div>
                 <div class="item-input-wrap">
-                  <input type="email" placeholder="Digite seu E-Mail"/>
+                  <input type="text" id="nome" placeholder="Digite seu Nome"/>
                 </div>
               </div>
             </div>
@@ -37,7 +37,7 @@
               <div class="item-inner">
                 <div class="item-title item-label">Telefone</div>
                 <div class="item-input-wrap">
-                  <input type="tel" placeholder="Digite seu Telefone"/>
+                  <input type="tel" id="telefone" placeholder="Digite seu Telefone"/>
                 </div>
               </div>
             </div>
@@ -47,16 +47,31 @@
               <div class="item-inner">
                 <div class="item-title item-label">Mensagem</div>
                 <div class="item-input-wrap">
-                  <textarea placeholder="Digite sua Mensagem"></textarea>
+                  <textarea type="text" id="mensagem" placeholder="Digite sua Mensagem"></textarea>
                 </div>
               </div>
             </div>
           </li>
       <div class="block block-strong color-theme-yellow">
-        <p class="row">
-          <a href="#" class="col button button-big button-fill button-raised">Enviar</a>
-        </p>
+        <input type="button" id="gravar" value="gravar" onclick="gravar()">
+        <input type="button" id="atualizar" value="atualizar" onclick="atualizar()">
       </div>
     </div>
   </div>
+  <script src="ops.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDpW8tKv6hXnC1iLA8Zt7WAbmq7LpUQyIs",
+    authDomain: "gustavolopesselin-bikcraft.firebaseapp.com",
+    databaseURL: "https://gustavolopesselin-bikcraft.firebaseio.com",
+    projectId: "gustavolopesselin-bikcraft",
+    storageBucket: "gustavolopesselin-bikcraft.appspot.com",
+    messagingSenderId: "186889214638"
+  };
+  firebase.initializeApp(config);
+</script>
   

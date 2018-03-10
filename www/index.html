@@ -10,7 +10,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
 
     <!-- Required meta tags-->
     <meta charset="utf-8">
@@ -70,6 +70,9 @@
                     </li>
                     <li>
                       <a href="/contato/" data-view=".view-main" class="panel-close">CONTATO</a>
+                    </li>
+                    <li>
+                      <a href="/bike/" data-view=".view-main" class="panel-close">BICICLETAS</a>
                     </li>
                   </ul>
                 </div>
@@ -169,6 +172,7 @@
                   </div>-->
                   <div class="col-50 color-theme-yellow botaologar">
                     <a href="#" class="button button-raised button-fill login-screen-open" data-login-screen="#my-login-screen">Logar</a>
+                    <a href="#" class="button button-raised button-fill login-screen-open" data-login-screen="#my-login-screen">Bicicletas</a>
                     <br>
                     <a href="#" class="button button-raised button-fill logoff" id="logoff">Deslogar</a>
                   </div>

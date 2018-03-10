@@ -123,7 +123,7 @@ $$('#my-login-screen .logoff').on('click', function () {
 });
 
 
-$$('#my-login-screen .login-screen-close').om('click', function () {
+$$('#my-login-screen .login-screen-close').on('click', function () {
   $$('input#email').val('');
   $$('input#password').val('');
 })
